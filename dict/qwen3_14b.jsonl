@@ -117,7 +117,6 @@
 {"san": "अतिवीर्यं", "hin": "सुपर शक्ति", "eng": "Excess energy"}
 {"san": "अतिचार", "hin": "त्वरित ग्रहों की गति", "eng": "Planetary motion"}
 {"san": "अतितरन्ति", "hin": "के पार", "eng": "beyond"}
-{"san": "अतितरलं", "hin": "अति + तरला, बहुत + अस्थिर", "eng": "Excessively fluid"}
 {"san": "अतिथि", "hin": "मीटर अतिथि", "eng": "guest"}
 {"san": "अतिदारूणमन्", "hin": "... बहुत भयानक", "eng": "Very horrifying"}
 {"san": "अतिदुर्वृत्त", "hin": "बेहद खराब आचरण के", "eng": "Extremely bad conduct"}
@@ -282,7 +281,6 @@
 {"san": "अनु", "hin": "निम्नलिखित", "eng": "following"}
 {"san": "अनुकम्पार्थं", "hin": "विशेष दया दिखाने", "eng": "show special mercy"}
 {"san": "अनुकारि", "hin": "जैसा", "eng": "Such"}
-{"san": "अनुचारय", "hin": "का पालन करें अनु + कार की प्रेरणा", "eng": "Obey the incentive"}
 {"san": "अनुचिन्तयन्", "hin": "निरंतर के बारे में सोच", "eng": "Thinking constantly"}
 {"san": "अनुतिष्ठन्ति", "hin": "नियमित रूप से प्रदर्शन", "eng": "Perform regularly"}
 {"san": "अनुत्तमं", "hin": "बेहतरीन", "eng": "Superlative"}
@@ -482,7 +480,6 @@
 {"san": "अभावयतः", "hin": "जो तय नहीं है", "eng": "absent"}
 {"san": "अभाषत", "hin": "बात करने के लिए शुरू किया", "eng": "began to speak"}
 {"san": "अभि", "hin": "पूर्वसर्ग", "eng": "prefix"}
-{"san": "अभि+तड्", "hin": "हड़ताल करने के लिए", "eng": "Strike a strike"}
 {"san": "अभिक्रम", "hin": "प्रयास में", "eng": "effort"}
 {"san": "अभिचार", "hin": "काला जादू", "eng": "Black magic"}
 {"san": "अभिजनवान्", "hin": "भव्य रिश्तेदारों से घिरा हुआ है", "eng": "surrounded by noble relations"}
@@ -876,10 +873,6 @@
 {"san": "अज्ञानां", "hin": "मूर्ख की", "eng": "ignorance"}
 {"san": "अज्ञानेन", "hin": "अज्ञानता से", "eng": "ignorance"}
 {"san": "आ", "hin": "से", "eng": "from"}
-{"san": "आ+घ्रा", "hin": "गंध करने के लिए", "eng": "smell"}
-{"san": "आ+चर्", "hin": "अभ्यास करने के लिए", "eng": "Practice"}
-{"san": "आ+या", "hin": "लिए आने के", "eng": "for coming"}
-{"san": "आ+रुह्", "hin": "चढ़ाई करने के लिए", "eng": "Ascend"}
 {"san": "आउदौ", "hin": "प्रारंभ में", "eng": "Initially"}
 {"san": "आंदोलन", "hin": "आंदोलन", "eng": "Movement"}
 {"san": "आंशिक", "hin": "आंशिक", "eng": "Partial"}
@@ -1146,7 +1139,6 @@
 {"san": "आसनं", "hin": "सीट", "eng": "seat"}
 {"san": "आसनस्थम्", "hin": "कमल की तरह मुद्रा में खड़ा था", "eng": "Standing in a lotus posture"}
 {"san": "आसने", "hin": "सीट पर", "eng": "on the seat"}
-{"san": "आसादय", "hin": "+ आ उदास की प्रेरणा का सहारा", "eng": "support of the inspiration of sadness"}
 {"san": "आसाद्य", "hin": "प्राप्त", "eng": "Attained"}
 {"san": "आसित्", "hin": "/ अस्तित्व", "eng": "existence"}
 {"san": "आसिन", "hin": "हथियार से", "eng": "armed"}
@@ -1376,7 +1368,6 @@
 {"san": "उन्मीलित", "hin": "खोला", "eng": "opened"}
 {"san": "उन्मूलयति", "hin": "बाहर खींच, उखाड़", "eng": "pull out"}
 {"san": "उप", "hin": "पास", "eng": "near"}
-{"san": "उप+शं", "hin": "के लिए बुझाने", "eng": "to explain for"}
 {"san": "उपकरण", "hin": "मतलब है", "eng": "Meaning"}
 {"san": "उपकल्पना", "hin": "स्त्री परिकल्पना", "eng": "Imagination"}
 {"san": "उपकार", "hin": "लाभ", "eng": "Benefit"}
@@ -1783,7 +1774,6 @@
 {"san": "कश्चित्", "hin": "कोई", "eng": "someone"}
 {"san": "कश्मलं", "hin": "मैलापन", "eng": "Stain"}
 {"san": "कषाय", "hin": "मीटर कसैले", "eng": "sour"}
-{"san": "कस्ते", "hin": "जो आपके +", "eng": "whose"}
 {"san": "कस्मात्", "hin": "क्यों", "eng": "Why"}
 {"san": "कस्मै", "hin": "`का '", "eng": "whose"}
 {"san": "कस्य", "hin": "किसका", "eng": "whose"}
@@ -1803,7 +1793,6 @@
 {"san": "काङ्क्षे", "hin": "क्या मैं इच्छा", "eng": "What do I desire"}
 {"san": "काञ्चन", "hin": "सोना", "eng": "Gold"}
 {"san": "काञ्चनः", "hin": "सोना", "eng": "Gold"}
-{"san": "काते", "hin": "के.ए. + ते, जो आपके +", "eng": "of the kind"}
 {"san": "कादंबरी", "hin": "लड़की या एक उपन्यास के शीर्षक के नाम", "eng": "Girl or a novel's title name"}
 {"san": "कादम्बः", "hin": "मीटर बतख", "eng": "heron"}
 {"san": "कानन", "hin": "वन", "eng": "forest"}
@@ -2376,7 +2365,6 @@
 {"san": "चतुस्सागरपर्यंतं", "hin": "जब तक या चार समुद्रों तक", "eng": "As far as four oceans"}
 {"san": "चत्वारः", "hin": "चार", "eng": "Four"}
 {"san": "चत्वारि", "hin": "चार", "eng": "Four"}
-{"san": "चन", "hin": "चा ? + न +, और नहीं", "eng": "and not"}
 {"san": "चन्दन", "hin": "चप्पल", "eng": "Sandalwood"}
 {"san": "चन्द्र", "hin": "चंद्रमा के लिए नाम", "eng": "Moon"}
 {"san": "चन्द्रकुण्डली", "hin": "चार्ट जहां लग्न या लग्न प्रसव चाँद का संकेत है", "eng": "Moon chart"}
@@ -2649,7 +2637,6 @@
 {"san": "जीवति", "hin": "जबकि रहने वाले कमाई के बिना", "eng": "living without earnings"}
 {"san": "जीवन", "hin": "जीवन", "eng": "life"}
 {"san": "जीवनं", "hin": "जीवन", "eng": "Life"}
-{"san": "जीवन्मुक्तिः", "hin": "जन्म के बंधन से मुक्ति + स्वतंत्रता", "eng": "Liberation from birth bondage and freedom"}
 {"san": "जीवभूतः", "hin": "वातानुकूलित रहने वाले इकाई", "eng": "air conditioned unit"}
 {"san": "जीवमान", "hin": "कौन रहता है", "eng": "living being"}
 {"san": "जीवलोके", "hin": "सशर्त जीवन की दुनिया में", "eng": "world of conditioned existence"}
@@ -2750,7 +2737,6 @@
 {"san": "तम्", "hin": "उसे", "eng": "him"}
 {"san": "तम", "hin": "क्रोध", "eng": "Wrath"}
 {"san": "तमः", "hin": "अंधेरे पु अज्ञान,", "eng": "darkness and ignorance"}
-{"san": "तमनेन", "hin": "+ अपरोक्ष यह है कि", "eng": "This is direct"}
 {"san": "तमस्", "hin": "अंधेरा", "eng": "Darkness"}
 {"san": "तमस", "hin": "अंधेरा, अज्ञानता, जड़ता", "eng": "darkness, ignorance, inertia"}
 {"san": "तमसः", "hin": "अंधेरे में", "eng": "darkness"}
@@ -3049,7 +3035,6 @@
 {"san": "दारा", "hin": "महिला", "eng": "Woman"}
 {"san": "दारिद्र्य", "hin": "निर्धनता", "eng": "Poverty"}
 {"san": "दार्वाघाटः", "hin": "मीटर कठफोड़वा", "eng": "Meter scale"}
-{"san": "दासोस्म्यहम्", "hin": "शिष्य हूँ मैं +", "eng": "I am the servant"}
 {"san": "दास्यन्ते", "hin": "पुरस्कार होगा", "eng": "reward"}
 {"san": "दास्यामि", "hin": "मैं दान देना होगा", "eng": "I shall give alms"}
 {"san": "दाक्ष्यं", "hin": "उपाय कुशलता", "eng": "Skillfulness"}
@@ -3058,7 +3043,6 @@
 {"san": "दिदर्शयिषन्", "hin": "दिखाने के इच्छुक", "eng": "Wishing to show"}
 {"san": "दिन", "hin": "दिन", "eng": "day"}
 {"san": "दिनदर्शिका", "hin": "स्त्री कैलेंडर", "eng": "Women's calendar"}
-{"san": "दिनयामिन्यौ", "hin": "दिना + यामिनी, दिन + रात", "eng": "day and night"}
 {"san": "दिनाङ्कः", "hin": "मीटर की तारीख", "eng": "Date"}
 {"san": "दिवं", "hin": "स्वर्ग में", "eng": "heaven"}
 {"san": "दिवङ्गतः", "hin": "मर गया", "eng": "departed"}
@@ -3542,8 +3526,6 @@
 {"san": "नासाभ्यन्तर", "hin": "नाक के भीतर", "eng": "nasal cavity"}
 {"san": "नासिका", "hin": "नाक", "eng": "nose"}
 {"san": "नि", "hin": "नीचे", "eng": "below"}
-{"san": "नि+विद्", "hin": "बताने के लिए", "eng": "Inform"}
-{"san": "नि+वृत्", "hin": "दूर जाने के लिए", "eng": "Go away"}
 {"san": "नि.ःकृश्ठ्कुलीनः", "hin": "... एक नीच परिवार के लिए पैदा हुआ", "eng": "Born in a low caste family"}
 {"san": "निः", "hin": "बिना", "eng": "without"}
 {"san": "निःश्रेणिका", "hin": "स्त्री सीढ़ी", "eng": "Women's staircase"}
@@ -3912,7 +3894,6 @@
 {"san": "परार्ध", "hin": "दूसरे छोर", "eng": "other end"}
 {"san": "पराशर", "hin": "महर्षि पाराशर क. वैदिक ज्योतिष के पिता के. पाठ का लेखक है जो सबसे अधिक इस्तेमाल किया भारत में ज्योतिषीय सिस्टम के लिए आधार है", "eng": "Vedic astrologer and author of the most used text in Indian astrological system"}
 {"san": "परि", "hin": "पर्याप्त", "eng": "Sufficient"}
-{"san": "परि+अट्", "hin": "के लिए दौरे", "eng": "for a tour"}
 {"san": "परिकरः", "hin": "प्रयास", "eng": "Effort"}
 {"san": "परिकीर्तितः", "hin": "है घोषित", "eng": "announced"}
 {"san": "परिक्लिष्टं", "hin": "अनिच्छा से", "eng": "Unwilling"}
@@ -4147,7 +4128,6 @@
 {"san": "पुण्यकृतं", "hin": "जो पवित्र गतिविधियों प्रदर्शन", "eng": "Pious deeds"}
 {"san": "पुण्यफलं", "hin": "पवित्र काम के परिणाम", "eng": "Meritorious result"}
 {"san": "पुण्याः", "hin": "धार्मिक", "eng": "Pious"}
-{"san": "पुण्यापुण्य", "hin": "गुण \\ + पापों", "eng": "virtues and sins"}
 {"san": "पुण्याय", "hin": "चतुर्थी एस कला मे प्रवीणता के लिए.", "eng": "Proficiency in fourth art."}
 {"san": "पुण्ये", "hin": "उनके पवित्र गतिविधियों का परिणाम", "eng": "Their sacred activities' result"}
 {"san": "पुत्र", "hin": "बेटा", "eng": "son"}
@@ -4285,9 +4265,6 @@
 {"san": "पौर्वदेहिकं", "hin": "पिछले शरीर से", "eng": "Previous body"}
 {"san": "पौलस्त्य", "hin": "रावण", "eng": "Ravana"}
 {"san": "प्कश", "hin": "विंग पु", "eng": "wing pu"}
-{"san": "प्र+चल्", "hin": "के लिए आंदोलन", "eng": "for movement"}
-{"san": "प्र+शंस्", "hin": "प्रशंसा करने के लिए", "eng": "praise"}
-{"san": "प्र+सह्", "hin": "झेलने सहना,", "eng": "endure"}
 {"san": "प्रकटिता", "hin": "दिखाई कोताही किया गया", "eng": "Omission"}
 {"san": "प्रकरोति", "hin": "करना", "eng": "does"}
 {"san": "प्रकार", "hin": "विविधता विकल्प,", "eng": "Variety options"}
@@ -4922,7 +4899,6 @@
 {"san": "भस्म", "hin": "राख", "eng": "ash"}
 {"san": "भस्मं", "hin": "राख", "eng": "Ashes"}
 {"san": "भस्मसात्", "hin": "राख करने के लिए जला", "eng": "burn to ashes"}
-{"san": "भस्मावशेषं", "hin": "+ राख बनी हुई है", "eng": "ash remains"}
 {"san": "भक्ष", "hin": "भोजन", "eng": "Food"}
 {"san": "भक्षयति", "hin": "ऊपर 10 खाने के लिए, करने के लिए खा", "eng": "Eats above ten to eat"}
 {"san": "भाः", "hin": "प्रकाश", "eng": "Light"}
@@ -5135,7 +5111,6 @@
 {"san": "मताः", "hin": "कर रहे हैं माना जाता है", "eng": "believed"}
 {"san": "मतिं", "hin": "बुद्धि", "eng": "Mind"}
 {"san": "मतिः", "hin": "बुद्धि, सोचा था कि राय,", "eng": "Mind, thought, opinion"}
-{"san": "मतिर्भिन्नः", "hin": "मन + विभिन्न अलग राय या दृश्य", "eng": "Different mind"}
 {"san": "मतिर्मम", "hin": "मेरी राय", "eng": "my opinion"}
 {"san": "मतुरा", "hin": "मथुरा के शहर", "eng": "Mathura city"}
 {"san": "मतृ", "hin": "मां", "eng": "Mother"}
@@ -5560,7 +5535,6 @@
 {"san": "मोहनं", "hin": "भ्रम", "eng": "Delusion"}
 {"san": "मोहयसि", "hin": "आप विस्मयकारी", "eng": "You astonish"}
 {"san": "मोहात्", "hin": "भ्रम से", "eng": "from delusion"}
-{"san": "मोहाद्दास्यति", "hin": "मोह के बाहर + देंगे", "eng": "Will give up attachment"}
 {"san": "मोहितं", "hin": "मोहित", "eng": "Enchanted"}
 {"san": "मोहिताः", "hin": "कर रहे हैं व्यग्र", "eng": "are agitated"}
 {"san": "मोहिनीं", "hin": "विस्मयकारी", "eng": "Amazement"}
@@ -5633,7 +5607,6 @@
 {"san": "यमः", "hin": "मौत के नियंत्रक", "eng": "God of Death"}
 {"san": "यमदूतानां", "hin": "मौत का स्वामी यमराज के दूत", "eng": "Messengers of Yama"}
 {"san": "यमेन", "hin": "यम, मौत के स्वामी द्वारा", "eng": "Yama, lord of death"}
-{"san": "यमेवैश", "hin": "रतालू + ईवा ईशा: उसे + खुद को या अकेले + इस", "eng": "He himself"}
 {"san": "यया", "hin": "जिसके द्वारा", "eng": "by which"}
 {"san": "यवन", "hin": "विदेशी", "eng": "Foreigner"}
 {"san": "यवनिका", "hin": "स्त्री पर्दा", "eng": "Veil"}
@@ -5675,7 +5648,6 @@
 {"san": "याता", "hin": "स्त्री पति के भाई की पत्नी", "eng": "Sister-in-law"}
 {"san": "याति", "hin": "चला जाता है", "eng": "goes"}
 {"san": "यात्रा", "hin": "रखरखाव", "eng": "maintenance"}
-{"san": "याथार्थ्यमेव", "hin": "चीजों की मूल प्रकृति या प्राकृतिक राज्यों + अकेला", "eng": "Essence of things or natural states alone"}
 {"san": "यादसां", "hin": "सभी तैराकी", "eng": "All swimmers"}
 {"san": "यादृक्", "hin": "के रूप में है", "eng": "as"}
 {"san": "यान्", "hin": "जो लोग", "eng": "who"}
@@ -5927,7 +5899,6 @@
 {"san": "रामाय", "hin": "राम के लिए", "eng": "for Rama"}
 {"san": "रामे", "hin": "राम में", "eng": "Ram in"}
 {"san": "रामेणाभिहता", "hin": "एक राम द्वारा मारा", "eng": "Struck by Rama"}
-{"san": "रामेति", "hin": "राम + आईटीआई इस प्रकार कह राम", "eng": "Ram says thus"}
 {"san": "रामो", "hin": "रमा", "eng": "Ram"}
 {"san": "रावण", "hin": "लंका से एक राक्षस राजा जो राम की पत्नी का अपहरण कर लिया", "eng": "Ravana"}
 {"san": "राशि", "hin": "राशि", "eng": "Mass"}
@@ -6197,7 +6168,6 @@
 {"san": "वशं", "hin": "को नियंत्रित", "eng": "to control"}
 {"san": "वशात्", "hin": "दायित्व के अधीन", "eng": "subject to duty"}
 {"san": "वशी", "hin": "जो नियंत्रित किया जाता है", "eng": "controlled"}
-{"san": "वशी+कृ", "hin": "को जीत पर काबू पाने के लिए,", "eng": "to conquer and control"}
 {"san": "वशे", "hin": "पूरी अधीनता में", "eng": "Complete subjugation"}
 {"san": "वश्य", "hin": "नियंत्रण के तहत", "eng": "Subject to control"}
 {"san": "वस्", "hin": "जीने के", "eng": "to live"}
@@ -6302,11 +6272,6 @@
 {"san": "वास्तू", "hin": "जगह निवास,", "eng": "dwelling place"}
 {"san": "वाहन", "hin": "वाहन", "eng": "vehicle"}
 {"san": "वाहिका", "hin": "परिवहन", "eng": "Transportation"}
-{"san": "वि+अप+गम्", "hin": "दूर जाने के लिए", "eng": "Go away"}
-{"san": "वि+चिन्त्", "hin": "सोचना", "eng": "Think"}
-{"san": "वि+भा", "hin": "करने के लिए सजाना", "eng": "arrange for doing"}
-{"san": "वि+स्मृ", "hin": "भूल करने के लिए", "eng": "Forget"}
-{"san": "वि+ज्ञा", "hin": "पता करने के", "eng": "ascertain"}
 {"san": "विंदति", "hin": "आनंद मिलता है", "eng": "Delight is obtained"}
 {"san": "योगसंज्ञितं", "hin": "योग में ट्रान्स कहा जाता है  एक वार्गा. हार्मोनिक 20 विभाजन. धार्मिक उत्साह के वर्णन के लिए इस्तेमाल किया और प्रोद्भूत आध्यात्मिक योग्यता", "eng": "Yogic trance state"}
 {"san": "विंशोत्तरि", "hin": "प्रयोग में आज सबसे लोकप्रिय दशा विधि", "eng": "Most popular method of state today"}
@@ -6713,7 +6678,6 @@
 {"san": "वैमानिकः", "hin": "पायलट पु", "eng": "Pilot"}
 {"san": "वैयक्तिक", "hin": "व्यक्तिगत विशे", "eng": "Personal"}
 {"san": "वैयाकरण", "hin": "व्याकरण", "eng": "Grammar"}
-{"san": "वैयाकरणस्यैषः", "hin": "+ वैयाकरण इस", "eng": "This grammarian"}
 {"san": "वैर", "hin": "शत्रुता", "eng": "enmity"}
 {"san": "वैराग्यं", "hin": "त्याग", "eng": "Renunciation"}
 {"san": "वैराग्येण", "hin": "सेना की टुकड़ी द्वारा", "eng": "by a military unit"}
@@ -7321,7 +7285,6 @@
 {"san": "सम्मोहः", "hin": "एकदम सही भ्रम", "eng": "Delusion"}
 {"san": "सम्मोहात्", "hin": "भ्रम से", "eng": "Delusion"}
 {"san": "सम्यक्", "hin": "उचित", "eng": "Correct"}
-{"san": "सम्यग्ग्राहयित्वा", "hin": "अच्छी तरह + कब्जा कर लिया", "eng": "Seized properly"}
 {"san": "सरति", "hin": "प्रपु एक जाने के लिए", "eng": "knows"}
 {"san": "सरल", "hin": "सीधे खरा,", "eng": "Straightforward"}
 {"san": "सरस्", "hin": "झील", "eng": "Lake"}
@@ -7632,7 +7595,6 @@
 {"san": "सूर्यनमस्कार", "hin": "रवि आसन को श्रद्धांजलि", "eng": "Sun Salutation"}
 {"san": "सूर्यनारायण", "hin": "रवि को संबोधित करने के लिए इस्तेमाल किया", "eng": "Solar deity"}
 {"san": "सूर्यवर्चस्वी", "hin": "सूरज की कौशल और प्रतिभा के साथ", "eng": "sun-endowed with skill and talent"}
-{"san": "सूर्यश्च", "hin": "रवि + और", "eng": "Sun and"}
 {"san": "सूर्योदयः", "hin": "सूर्योदय पु", "eng": "sunrise"}
 {"san": "सूक्ष्म", "hin": "मिनट, अत्यंत छोटे, उत्सुक", "eng": "Minute"}
 {"san": "सूक्ष्मत्वात्", "hin": "सूक्ष्म होने के खाते पर", "eng": "Because of fineness"}
