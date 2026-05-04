@@ -1,0 +1,4 @@
+{"file": "flores_plus.jsonl", "max_san_tokens": 336, "max_hin_tokens": 359}
+{"file": "in22_conv.jsonl", "max_san_tokens": 182, "max_hin_tokens": 184}
+{"file": "in22_gen.jsonl", "max_san_tokens": 639, "max_hin_tokens": 495}
+{"file": "nios.jsonl", "max_san_tokens": 1462, "max_hin_tokens": 1467}
