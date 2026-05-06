@@ -9,7 +9,7 @@ import json
 import evaluate
 from comet import download_model, load_from_checkpoint
 
-INPUT_FOLDER = "/home/shubhamdas-pg/tlr/sh/r1/qwen3-4b"
+INPUT_FOLDER = "/home/shubhamdas-pg/tlr/sh/r2/qwen3-4b"
 OUTPUT_SCORES_JSONL = os.path.join(INPUT_FOLDER, "scores.jsonl")
 
 os.makedirs(os.path.dirname(OUTPUT_SCORES_JSONL), exist_ok=True)
