@@ -4,9 +4,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 
 INPUT_FILE = "/home/shubhamdas-pg/tlr/dict/filtered.jsonl"
-OUTPUT_FILE = "/home/shubhamdas-pg/tlr/dict/qwen3_32b.jsonl"
+OUTPUT_FILE = "/home/shubhamdas-pg/tlr/dict/phi4.jsonl"
 
-MODEL_NAME = "Qwen/Qwen3-32B"
+MODEL_NAME = "microsoft/phi-4"
 
 dtype = torch.bfloat16
 
@@ -14,7 +14,7 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    torch_dtype=dtype,
+    dtype=dtype,
     device_map="auto"
 )
 
