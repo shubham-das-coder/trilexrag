@@ -1,0 +1,12 @@
+{"model": "nllb200_1p3b", "file": "flores_plus", "hallucinated_rows": 43, "dataset_total": 1012, "percentage": "4.25"}
+{"model": "nllb200_1p3b", "file": "in22_conv", "hallucinated_rows": 8, "dataset_total": 1503, "percentage": "0.53"}
+{"model": "nllb200_1p3b", "file": "in22_gen", "hallucinated_rows": 36, "dataset_total": 1024, "percentage": "3.52"}
+{"model": "nllb200_1p3b", "file": "nios", "hallucinated_rows": 6, "dataset_total": 1743, "percentage": "0.34"}
+{"model": "nllb200_3p3b", "file": "flores_plus", "hallucinated_rows": 48, "dataset_total": 1012, "percentage": "4.74"}
+{"model": "nllb200_3p3b", "file": "in22_conv", "hallucinated_rows": 4, "dataset_total": 1503, "percentage": "0.27"}
+{"model": "nllb200_3p3b", "file": "in22_gen", "hallucinated_rows": 52, "dataset_total": 1024, "percentage": "5.08"}
+{"model": "nllb200_3p3b", "file": "nios", "hallucinated_rows": 4, "dataset_total": 1743, "percentage": "0.23"}
+{"model": "qwen3_4b_instruct", "file": "flores_plus", "hallucinated_rows": 369, "dataset_total": 1012, "percentage": "36.46"}
+{"model": "qwen3_4b_instruct", "file": "in22_conv", "hallucinated_rows": 298, "dataset_total": 1503, "percentage": "19.83"}
+{"model": "qwen3_4b_instruct", "file": "in22_gen", "hallucinated_rows": 407, "dataset_total": 1024, "percentage": "39.75"}
+{"model": "qwen3_4b_instruct", "file": "nios", "hallucinated_rows": 481, "dataset_total": 1743, "percentage": "27.60"}
