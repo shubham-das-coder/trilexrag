@@ -1,0 +1,12 @@
+{"model": "nllb200_1p3b", "file": "flores_plus", "total": 43, "bengali": 0.0, "latin": 93.02, "urdu_arabic": 0.0, "others": 6.98}
+{"model": "nllb200_1p3b", "file": "in22_conv", "total": 8, "bengali": 0.0, "latin": 100.0, "urdu_arabic": 0.0, "others": 0.0}
+{"model": "nllb200_1p3b", "file": "in22_gen", "total": 36, "bengali": 0.0, "latin": 77.78, "urdu_arabic": 16.67, "others": 11.11}
+{"model": "nllb200_1p3b", "file": "nios", "total": 6, "bengali": 16.67, "latin": 50.0, "urdu_arabic": 16.67, "others": 16.67}
+{"model": "nllb200_3p3b", "file": "flores_plus", "total": 48, "bengali": 4.17, "latin": 93.75, "urdu_arabic": 4.17, "others": 2.08}
+{"model": "nllb200_3p3b", "file": "in22_conv", "total": 4, "bengali": 0.0, "latin": 100.0, "urdu_arabic": 0.0, "others": 0.0}
+{"model": "nllb200_3p3b", "file": "in22_gen", "total": 52, "bengali": 5.77, "latin": 78.85, "urdu_arabic": 1.92, "others": 23.08}
+{"model": "nllb200_3p3b", "file": "nios", "total": 4, "bengali": 25.0, "latin": 25.0, "urdu_arabic": 25.0, "others": 25.0}
+{"model": "qwen3_4b_instruct", "file": "flores_plus", "total": 369, "bengali": 72.63, "latin": 15.45, "urdu_arabic": 7.86, "others": 26.29}
+{"model": "qwen3_4b_instruct", "file": "in22_conv", "total": 298, "bengali": 67.79, "latin": 8.05, "urdu_arabic": 4.36, "others": 30.87}
+{"model": "qwen3_4b_instruct", "file": "in22_gen", "total": 407, "bengali": 74.94, "latin": 12.53, "urdu_arabic": 8.11, "others": 32.43}
+{"model": "qwen3_4b_instruct", "file": "nios", "total": 481, "bengali": 83.16, "latin": 4.99, "urdu_arabic": 3.12, "others": 22.66}

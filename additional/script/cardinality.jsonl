@@ -1,0 +1,12 @@
+{"model": "nllb200_1p3b", "dataset": "flores_plus", "cardinality_distribution": {"1": 43}}
+{"model": "nllb200_1p3b", "dataset": "in22_conv", "cardinality_distribution": {"1": 8}}
+{"model": "nllb200_1p3b", "dataset": "in22_gen", "cardinality_distribution": {"1": 34, "2": 2}}
+{"model": "nllb200_1p3b", "dataset": "nios", "cardinality_distribution": {"1": 6}}
+{"model": "nllb200_3p3b", "dataset": "flores_plus", "cardinality_distribution": {"1": 46, "2": 2}}
+{"model": "nllb200_3p3b", "dataset": "in22_conv", "cardinality_distribution": {"1": 4}}
+{"model": "nllb200_3p3b", "dataset": "in22_gen", "cardinality_distribution": {"1": 47, "2": 5}}
+{"model": "nllb200_3p3b", "dataset": "nios", "cardinality_distribution": {"1": 4}}
+{"model": "qwen3_4b_instruct", "dataset": "flores_plus", "cardinality_distribution": {"1": 299, "2": 58, "3": 12}}
+{"model": "qwen3_4b_instruct", "dataset": "in22_conv", "cardinality_distribution": {"1": 266, "2": 31, "3": 1}}
+{"model": "qwen3_4b_instruct", "dataset": "in22_gen", "cardinality_distribution": {"1": 309, "2": 85, "3": 10, "4": 3}}
+{"model": "qwen3_4b_instruct", "dataset": "nios", "cardinality_distribution": {"1": 422, "2": 55, "3": 2, "4": 1, "6": 1}}
