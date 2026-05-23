@@ -24,10 +24,10 @@ data = {
 
 models = [
     "ZS",
-    "R (sa-en)",
-    "R (sa-en-hi)",
-    "R (sa-hi)",
-    "R (sa-hi-en)",
+    "DGT (sa-en)",
+    "DGT (sa-en-hi)",
+    "DGT (sa-hi)",
+    "DGT (sa-hi-en)",
     "NLLB 1.3B",
     "NLLB 3.3B"
 ]
@@ -65,7 +65,7 @@ ax = sns.heatmap(
 
 # Axis labels
 ax.set_xlabel("Datasets", fontsize=20, fontweight='normal')
-ax.set_ylabel("Models", fontsize=20, fontweight='normal')
+ax.set_ylabel("Methods", fontsize=20, fontweight='normal')
 
 # Tick labels
 ax.set_xticklabels(

@@ -16,18 +16,18 @@ os.makedirs("diagrams", exist_ok=True)
 # -----------------------------
 
 data = {
-    "Flores+":      [41.77, 41.68, 39.90, 39.88, 39.89, 66.14, 68.03],
-    "IN22-Conv":    [48.34, 49.05, 45.74, 45.78, 46.05, 67.71, 69.78],
-    "IN22-Gen":     [44.18, 43.93, 42.13, 41.98, 42.10, 66.04, 67.52],
-    "NIOS":         [51.03, 50.56, 48.39, 48.66, 48.43, 54.06, 56.38]
+    "Flores+":      [12.43, 12.60, 9.79, 9.86, 9.80, 33.01, 34.66],
+    "IN22-Conv":    [15.62, 15.79, 12.82, 12.88, 12.79, 27.48, 30.30],
+    "IN22-Gen":     [14.68, 14.82, 12.50, 12.53, 12.49, 32.08, 34.22],
+    "NIOS":         [13.95, 14.91, 12.08, 12.45, 11.96, 15.98, 18.07]
 }
 
 models = [
     "ZS",
-    "R (sa-en)",
-    "R (sa-en-hi)",
-    "R (sa-hi)",
-    "R (sa-hi-en)",
+    "DGT (sa-en)",
+    "DGT (sa-en-hi)",
+    "DGT (sa-hi)",
+    "DGT (sa-hi-en)",
     "NLLB 1.3B",
     "NLLB 3.3B"
 ]
@@ -65,7 +65,7 @@ ax = sns.heatmap(
 
 # Axis labels
 ax.set_xlabel("Datasets", fontsize=20, fontweight='normal')
-ax.set_ylabel("Models", fontsize=20, fontweight='normal')
+ax.set_ylabel("Methods", fontsize=20, fontweight='normal')
 
 # Tick labels
 ax.set_xticklabels(
@@ -96,9 +96,9 @@ plt.tight_layout()
 # Save figure
 # -----------------------------
 
-png_path = "diagrams/comet.png"
-pdf_path = "diagrams/comet.pdf"
-pptx_path = "diagrams/comet.pptx"
+png_path = "diagrams/meteor.png"
+pdf_path = "diagrams/meteor.pdf"
+pptx_path = "diagrams/meteor.pptx"
 
 plt.savefig(png_path, dpi=300, bbox_inches='tight')
 plt.savefig(pdf_path, bbox_inches='tight')

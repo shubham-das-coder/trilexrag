@@ -71,7 +71,7 @@ plt.title("")
 
 # Axis labels
 plt.xlabel("Datasets", fontsize=20)
-plt.ylabel("Models", fontsize=20)
+plt.ylabel("Methods", fontsize=20)
 
 # -----------------------------
 # Adjust Dataset Names Properly
