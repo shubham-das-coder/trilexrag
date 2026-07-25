@@ -5,10 +5,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 import re
 
-INPUT_DIR = "/home/shubhamdas-pg/tlr/data"
-OUTPUT_DIR = "/home/shubhamdas-pg/tlr/se/r1/qwen3-4b-instruct"
+INPUT_DIR = "data"
+OUTPUT_DIR = "se/r1/qwen3-4b-instruct"
 MODEL_NAME = "Qwen/Qwen3-4B-Instruct-2507"
-DICT_FILE = "/home/shubhamdas-pg/tlr/dict/phi4.jsonl"
+DICT_FILE = "dict/phi4.jsonl"
 
 assert torch.cuda.is_available()
 

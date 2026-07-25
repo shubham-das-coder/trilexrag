@@ -3,10 +3,12 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
+import re
 
 INPUT_DIR = "data"
-OUTPUT_DIR = "zs/phi4"
+OUTPUT_DIR = "she/r1/phi4"
 MODEL_NAME = "microsoft/phi-4"
+DICT_FILE = "dict/phi4.jsonl"
 
 assert torch.cuda.is_available()
 
@@ -25,17 +27,60 @@ model.eval()
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
+def load_dictionary(dict_file):
+    dictionary = []
+    with open(dict_file, "r", encoding="utf-8") as f:
+        for line in f:
+            entry = json.loads(line)
+            dictionary.append(entry)
+    return dictionary
+
+DICTIONARY = load_dictionary(DICT_FILE)
+
+def tokenize_sanskrit(text):
+    return re.findall(r'[\u0900-\u097F]+', text)
+
+def get_exact_matches(san_text):
+    matches = []
+    words = set(tokenize_sanskrit(san_text))
+    for entry in DICTIONARY:
+        if entry["san"] in words:
+            matches.append(entry)
+    return matches
+
+def build_rag_context(matches):
+    if not matches:
+        return ""
+    context_lines = []
+    for entry in matches:
+        context_lines.append(f'Sanskrit: {entry["san"]}, Hindi: {entry["hin"]}, English: {entry.get("eng","")}')
+    context_text = "\n".join(context_lines)
+    return context_text
+
 def build_messages(san_text):
+    matches = get_exact_matches(san_text)
+    rag_context = build_rag_context(matches)
+
     system_instruction = "You are a professional Sanskrit to Hindi translation system. Translate ONLY into Hindi using STRICT Devanagari script. Output ONLY final translation. No explanation. No repetition."
-    user_instruction = f"Translate the following Sanskrit text into Hindi:\n\n{san_text}"
+
+    user_instruction = f"""Translate the following Sanskrit text into Hindi.
+
+You are given relevant dictionary entries. Use these entries when they are applicable to the input. Prefer meanings corresponding to the specified target language for matched Sanskrit words when available. Ensure that the final translation is fluent, consistent, and entirely in the target language. Do not copy dictionary entries verbatim without considering context.
+
+Sanskrit Text:
+{san_text}
+
+Relevant Dictionary Entries:
+{rag_context}"""
+
     return [
         {"role": "system", "content": system_instruction},
         {"role": "user", "content": user_instruction}
-    ]
+    ], matches
 
 @torch.inference_mode()
 def translate(san_text):
-    messages = build_messages(san_text)
+    messages, matches = build_messages(san_text)
 
     prompt = tokenizer.apply_chat_template(
         messages,
@@ -58,20 +103,24 @@ def translate(san_text):
     )
 
     gen_tokens = output[0][inputs.input_ids.shape[1]:]
-    return tokenizer.decode(gen_tokens, skip_special_tokens=True).strip()
+    gen_text = tokenizer.decode(gen_tokens, skip_special_tokens=True).strip()
+
+    return gen_text, len(matches), matches
 
 def process_file(input_file, output_file):
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    open(output_file, "a", encoding="utf-8").close()
 
     with open(input_file, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    with open(output_file, "a", encoding="utf-8") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         for line in tqdm(lines, desc=f"Translating {os.path.basename(input_file)}"):
             data = json.loads(line)
             san_text = data["san"]
-            data["gen"] = translate(san_text)
+            gen_text, match_count, match_lines = translate(san_text)
+            data["gen"] = gen_text
+            data["match_count"] = match_count
+            data["matches"] = match_lines
             f.write(json.dumps(data, ensure_ascii=False) + "\n")
             f.flush()
 
@@ -90,7 +139,6 @@ def process():
     for input_file in file_list:
         rel_path = os.path.relpath(input_file, INPUT_DIR)
         output_file = os.path.join(OUTPUT_DIR, rel_path)
-
         process_file(input_file, output_file)
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
 INPUT_DIR = "data"
-OUTPUT_DIR = "zs/phi4"
+OUTPUT_DIR = "fs/phi4"
 MODEL_NAME = "microsoft/phi-4"
 
 assert torch.cuda.is_available()
@@ -27,10 +27,32 @@ if tokenizer.pad_token is None:
 
 def build_messages(san_text):
     system_instruction = "You are a professional Sanskrit to Hindi translation system. Translate ONLY into Hindi using STRICT Devanagari script. Output ONLY final translation. No explanation. No repetition."
-    user_instruction = f"Translate the following Sanskrit text into Hindi:\n\n{san_text}"
+    
+    few_shot_prompt = f"""Translate Sanskrit to Hindi in Devanagari script.
+
+Example 1:
+Sanskrit: बालकः उद्याने क्रीडति।
+Hindi: बच्चा बगीचे में खेलता है।
+
+Example 2:
+Sanskrit: सः मित्रेण सह वार्तालापं करोति।
+Hindi: वह मित्र के साथ बातचीत करता है।
+
+Example 3:
+Sanskrit: सः अतिवीर्यं औषधं सेवनं करोति।
+Hindi: वह अत्यधिक शक्ति वाली औषधि का सेवन करता है।
+
+Example 4:
+Sanskrit: अग्निः सर्वाणि दहति।
+Hindi: आग सब कुछ जला देती है।
+
+Now translate:
+Sanskrit: {san_text}
+Hindi:"""
+
     return [
         {"role": "system", "content": system_instruction},
-        {"role": "user", "content": user_instruction}
+        {"role": "user", "content": few_shot_prompt}
     ]
 
 @torch.inference_mode()
