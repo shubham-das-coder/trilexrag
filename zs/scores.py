@@ -9,7 +9,7 @@ import json
 import evaluate
 from comet import download_model, load_from_checkpoint
 
-INPUT_FOLDER = "/home/shubhamdas-pg/tlr/zs/qwen3-4b-instruct"
+INPUT_FOLDER = "zs/gpt-oss"
 OUTPUT_SCORES_JSONL = os.path.join(INPUT_FOLDER, "scores.jsonl")
 
 os.makedirs(os.path.dirname(OUTPUT_SCORES_JSONL), exist_ok=True)
