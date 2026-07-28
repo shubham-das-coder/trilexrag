@@ -1,3 +1,7 @@
+{"model": "gpt_oss_20b", "file": "flores_plus", "total": 43, "bengali": 0.0, "latin": 100.0, "urdu_arabic": 0.0, "others": 0.0}
+{"model": "gpt_oss_20b", "file": "in22_conv", "total": 5, "bengali": 0.0, "latin": 80.0, "urdu_arabic": 20.0, "others": 0.0}
+{"model": "gpt_oss_20b", "file": "in22_gen", "total": 28, "bengali": 0.0, "latin": 92.86, "urdu_arabic": 7.14, "others": 0.0}
+{"model": "gpt_oss_20b", "file": "nios", "total": 1, "bengali": 0.0, "latin": 100.0, "urdu_arabic": 0.0, "others": 0.0}
 {"model": "nllb200_1p3b", "file": "flores_plus", "total": 43, "bengali": 0.0, "latin": 93.02, "urdu_arabic": 0.0, "others": 6.98}
 {"model": "nllb200_1p3b", "file": "in22_conv", "total": 8, "bengali": 0.0, "latin": 100.0, "urdu_arabic": 0.0, "others": 0.0}
 {"model": "nllb200_1p3b", "file": "in22_gen", "total": 36, "bengali": 0.0, "latin": 77.78, "urdu_arabic": 16.67, "others": 11.11}

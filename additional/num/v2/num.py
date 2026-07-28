@@ -4,11 +4,11 @@ import re
 from decimal import Decimal, ROUND_HALF_UP
 from tqdm import tqdm
 
-INPUT_FILE = "combined/nmt/nllb200_3p3b_outputs.jsonl"
+INPUT_FILE = "combined/zs/gpt_oss_20b_outputs.jsonl"
 
-OUTPUT_STATS_FILE = "additional/num/v2/nllb200_3p3b_stats.jsonl"
+OUTPUT_STATS_FILE = "additional/num/v2/gpt_oss_20b_stats.jsonl"
 
-OUTPUT_ROWS_FILE = "additional/num/v2/nllb200_3p3b_rows.jsonl"
+OUTPUT_ROWS_FILE = "additional/num/v2/gpt_oss_20b_rows.jsonl"
 
 os.makedirs(os.path.dirname(OUTPUT_STATS_FILE), exist_ok=True)
 

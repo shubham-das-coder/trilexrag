@@ -3,7 +3,7 @@ import json
 from decimal import Decimal, ROUND_HALF_UP
 
 INPUT_FOLDER = "additional/script"
-OUTPUT_FILE = "additional/script/percentage.jsonl"
+OUTPUT_FILE = "additional/script/total_percentage.jsonl"
 
 DATASET_TOTALS = {
     "flores_plus": 1012,

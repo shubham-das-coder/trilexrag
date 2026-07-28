@@ -2,9 +2,9 @@ import os
 import json
 from tqdm import tqdm
 
-INPUT_ROOT = "she/r1/qwen3-4b-instruct"
+INPUT_ROOT = "she/r1/gpt-oss-20b"
 
-OUTPUT_BASE = "combined/she/qwen3_4b_instruct"
+OUTPUT_BASE = "combined/she/gpt_oss_20b"
 
 OUTPUT_OUTPUTS = f"{OUTPUT_BASE}_outputs.jsonl"
 OUTPUT_SCORES = f"{OUTPUT_BASE}_scores.jsonl"

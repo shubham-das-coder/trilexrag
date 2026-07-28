@@ -18,7 +18,7 @@ else:
 import evaluate
 from comet import download_model, load_from_checkpoint
 
-INPUT_FOLDER = "she/r1/gpt-oss-20b"
+INPUT_FOLDER = "zs/gpt-oss-20b"
 OUTPUT_SCORES_JSONL = os.path.join(INPUT_FOLDER, "scores.jsonl")
 
 os.makedirs(os.path.dirname(OUTPUT_SCORES_JSONL), exist_ok=True)

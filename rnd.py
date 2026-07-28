@@ -2,8 +2,8 @@ import json
 from decimal import Decimal, ROUND_HALF_UP
 
 # Input and output files
-INPUT_FILE = "/home/shubhamdas-pg/tlr/zs/qwen3-4b-instruct/scores.jsonl"
-OUTPUT_FILE = "/home/shubhamdas-pg/tlr/rnd.txt"
+INPUT_FILE = "zs/gpt-oss-20b/scores.jsonl"
+OUTPUT_FILE = "rnd.txt"
 
 
 def round_2(x):

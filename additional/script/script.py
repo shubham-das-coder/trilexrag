@@ -4,9 +4,9 @@ import regex as re
 from collections import defaultdict
 from tqdm import tqdm
 
-INPUT_FILE = "combined/zs/qwen3_4b_instruct_outputs.jsonl"
+INPUT_FILE = "combined/zs/gpt_oss_20b_outputs.jsonl"
 
-OUTPUT_BASE = "additional/script/qwen3_4b_instruct"
+OUTPUT_BASE = "additional/script/gpt_oss_20b"
 
 OUTPUT_ROWS_FILE = f"{OUTPUT_BASE}_rows.jsonl"
 OUTPUT_STATS_FILE = f"{OUTPUT_BASE}_stats.jsonl"

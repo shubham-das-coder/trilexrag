@@ -1,3 +1,7 @@
+{"model": "gpt_oss_20b", "file": "flores_plus", "hallucinated_rows": 43, "dataset_total": 1012, "percentage": "4.25"}
+{"model": "gpt_oss_20b", "file": "in22_conv", "hallucinated_rows": 5, "dataset_total": 1503, "percentage": "0.33"}
+{"model": "gpt_oss_20b", "file": "in22_gen", "hallucinated_rows": 28, "dataset_total": 1024, "percentage": "2.73"}
+{"model": "gpt_oss_20b", "file": "nios", "hallucinated_rows": 1, "dataset_total": 1743, "percentage": "0.06"}
 {"model": "nllb200_1p3b", "file": "flores_plus", "hallucinated_rows": 43, "dataset_total": 1012, "percentage": "4.25"}
 {"model": "nllb200_1p3b", "file": "in22_conv", "hallucinated_rows": 8, "dataset_total": 1503, "percentage": "0.53"}
 {"model": "nllb200_1p3b", "file": "in22_gen", "hallucinated_rows": 36, "dataset_total": 1024, "percentage": "3.52"}
