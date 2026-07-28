@@ -31,8 +31,8 @@ def build_messages(san_text):
     one_shot_prompt = f"""Translate Sanskrit to Hindi in Devanagari script.
 
 Example:
-Sanskrit: बालकः उद्याने क्रीडति।
-Hindi: बच्चा बगीचे में खेलता है।
+Sanskrit: मम विचारः अस्ति यत् आधुनिकयुगे ज्ञानप्राप्तये समीक्षात्मकचिन्तनम् अत्यन्तम् आवश्यकम् अस्ति।
+Hindi: मेरा मानना है कि आधुनिक युग में ज्ञान प्राप्त करने के लिए आलोचनात्मक सोच बहुत आवश्यक है।
 
 Now translate:
 Sanskrit: {san_text}
