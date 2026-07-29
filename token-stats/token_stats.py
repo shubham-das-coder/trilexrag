@@ -3,50 +3,77 @@ import json
 from transformers import AutoTokenizer
 from tqdm import tqdm
 
-INPUT_DIR = "/home/shubhamdas-pg/tlr/data"
-OUTPUT_FILE = "/home/shubhamdas-pg/tlr/token-stats/token_stats.jsonl"
-MODEL_NAME = "Qwen/Qwen3-4B"
+INPUT_DIR = "data"
+OUTPUT_FILE = "token-stats/token_stats.jsonl"
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+MODEL_NAMES = sorted([
+    "openai/gpt-oss-20b",
+    "Qwen/Qwen3-4B-Instruct-2507",
+    "facebook/nllb-200-1.3B",
+    "facebook/nllb-200-3.3B",
+], key=str.lower)
 
-def get_token_length(text):
+os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+
+tokenizers = {
+    model: AutoTokenizer.from_pretrained(model, trust_remote_code=True)
+    for model in MODEL_NAMES
+}
+
+
+def get_token_length(tokenizer, text):
     if text is None:
         return 0
     return len(tokenizer.encode(text, add_special_tokens=False))
 
-os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as out_f:
+results = []
+
+for model_name in MODEL_NAMES:
+    tokenizer = tokenizers[model_name]
+
+    print(f"\nProcessing tokenizer: {model_name}")
+
     for root, _, files in os.walk(INPUT_DIR):
-        for file in files:
-            if file.endswith(".jsonl"):
-                file_path = os.path.join(root, file)
+        for file in sorted(files):
+            if not file.endswith(".jsonl"):
+                continue
 
-                max_san = 0
-                max_hin = 0
+            file_path = os.path.join(root, file)
+            dataset = os.path.relpath(file_path, INPUT_DIR).replace("\\", "/")
 
-                with open(file_path, "r", encoding="utf-8") as f:
-                    for line in tqdm(f, desc=f"Processing {file}", leave=False):
-                        data = json.loads(line.strip())
+            max_san = 0
+            max_hin = 0
 
-                        san_text = data.get("san", "")
-                        hin_text = data.get("hin", "")
+            with open(file_path, "r", encoding="utf-8") as f:
+                for line in tqdm(
+                    f,
+                    desc=f"{os.path.basename(model_name)} | {dataset}",
+                    leave=False,
+                ):
+                    data = json.loads(line)
 
-                        san_len = get_token_length(san_text)
-                        hin_len = get_token_length(hin_text)
+                    san_len = get_token_length(tokenizer, data.get("san", ""))
+                    hin_len = get_token_length(tokenizer, data.get("hin", ""))
 
-                        if san_len > max_san:
-                            max_san = san_len
+                    max_san = max(max_san, san_len)
+                    max_hin = max(max_hin, hin_len)
 
-                        if hin_len > max_hin:
-                            max_hin = hin_len
+            results.append({
+                "model": model_name,
+                "dataset": dataset,
+                "max_san_tokens": max_san,
+                "max_hin_tokens": max_hin,
+            })
 
-                result = {
-                    "file": file,
-                    "max_san_tokens": max_san,
-                    "max_hin_tokens": max_hin
-                }
+            print(
+                f"{model_name} | {dataset} | SAN: {max_san} | HIN: {max_hin}"
+            )
 
-                out_f.write(json.dumps(result, ensure_ascii=False) + "\n")
+results.sort(key=lambda x: (x["model"].lower(), x["dataset"].lower()))
 
-                print(f"{file} | SAN: {max_san} | HIN: {max_hin}")
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    for result in results:
+        f.write(json.dumps(result, ensure_ascii=False) + "\n")
+
+print(f"\nSaved results to {OUTPUT_FILE}")
