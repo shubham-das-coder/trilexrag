@@ -13,11 +13,18 @@ from pptx.util import Inches
 # ==========================================
 
 # 1. Path mapping: Assign each Model/Method (Y-axis row) to its JSONL result file path.
-MODEL_FILE_MAP = {
-    "NLLB 1.3B": "combined/nmt/nllb200_1p3b_scores.jsonl",
-    "NLLB 3.3B": "combined/nmt/nllb200_3p3b_scores.jsonl",
-    "Qwen3 4B ZS": "combined/zs/qwen3_4b_instruct_scores.jsonl",
-    "GPT-OSS 20B ZS": "combined/zs/gpt_oss_20b_scores.jsonl",
+# Python dictionaries maintain insertion order, so rows will appear in this exact order.
+METHOD_FILE_MAP = {
+    "NLLB-1.3B": "combined/nmt/nllb200_1p3b_scores.jsonl",
+    "NLLB-3.3B": "combined/nmt/nllb200_3p3b_scores.jsonl",
+    "Qwen3 ZS": "combined/zs/qwen3_4b_instruct_scores.jsonl",
+    "Qwen3 OS": "combined/os/qwen3_4b_instruct_scores.jsonl",
+    "Qwen3 FS": "combined/fs/qwen3_4b_instruct_scores.jsonl",
+    "Qwen3 DGT (sa-en)": "combined/se/qwen3_4b_instruct_scores.jsonl",
+    "GPT-OSS ZS": "combined/zs/gpt_oss_20b_scores.jsonl",
+    "GPT-OSS OS": "combined/os/gpt_oss_20b_scores.jsonl",
+    "GPT-OSS FS": "combined/fs/gpt_oss_20b_scores.jsonl",
+    "GPT-OSS DGT (sa-en)": "combined/se/gpt_oss_20b_scores.jsonl"
 }
 
 # 2. Dataset Display Name Mapping (maps the internal "file" value to chart X-axis labels)
@@ -64,8 +71,8 @@ def load_and_parse_data(metric_cfg):
     
     matrix_data = {}
 
-    for model_name, file_path in MODEL_FILE_MAP.items():
-        model_scores = {}
+    for method_name, file_path in METHOD_FILE_MAP.items():
+        method_scores = {}
         
         # Expand wildcard if provided, or use exact file path
         matching_files = glob.glob(file_path) if "*" in file_path else [file_path]
@@ -96,12 +103,15 @@ def load_and_parse_data(metric_cfg):
                     if should_scale and val <= 1.0 and val > 0.0:
                         val *= 100.0
                         
-                    model_scores[dataset_name] = val
+                    method_scores[dataset_name] = val
                     
-        matrix_data[model_name] = model_scores
+        matrix_data[method_name] = method_scores
 
     # Construct DataFrame
     df = pd.DataFrame.from_dict(matrix_data, orient='index')
+    
+    # Reorder rows to match the exact insertion order of METHOD_FILE_MAP
+    df = df.reindex([m for m in METHOD_FILE_MAP.keys() if m in df.index])
     
     # Reorder columns to match requested dataset sequence
     existing_cols = [col for col in DATASET_ORDER if col in df.columns]
@@ -124,9 +134,9 @@ for metric_name, cfg in METRICS_TO_PLOT.items():
         print(f"No data found for {metric_name}. Skipping...")
         continue
 
-    # Plot size based on row/column count
+    # Plot size based on row/column count (reduced height multiplier to make row rectangles shorter)
     fig_width = max(10, len(df.columns) * 2.5)
-    fig_height = max(6, len(df.index) * 1.0)
+    fig_height = max(4, len(df.index) * 0.5)  # Changed multiplier from 1.0 to 0.5
 
     plt.figure(figsize=(fig_width, fig_height))
 
@@ -137,8 +147,9 @@ for metric_name, cfg in METRICS_TO_PLOT.items():
         cmap="YlGnBu",
         linewidths=0.5,
         cbar=True,
+        square=False,  # Allows non-square wide/short rectangles
         annot_kws={
-            "size": 18,
+            "size": 14,  # Slightly reduced to ensure numbers fit cleanly in shorter rows
             "weight": "normal"
         },
         cbar_kws={
@@ -147,27 +158,27 @@ for metric_name, cfg in METRICS_TO_PLOT.items():
     )
 
     # Axis Labels
-    ax.set_xlabel(X_AXIS_LABEL, fontsize=20, fontweight='normal', labelpad=12)
-    ax.set_ylabel(Y_AXIS_LABEL, fontsize=20, fontweight='normal', labelpad=12)
+    ax.set_xlabel(X_AXIS_LABEL, fontsize=18, fontweight='normal', labelpad=12)
+    ax.set_ylabel(Y_AXIS_LABEL, fontsize=18, fontweight='normal', labelpad=12)
 
     # Ticks Formatting
     ax.set_xticklabels(
         ax.get_xticklabels(),
         rotation=0,
-        fontsize=18,
+        fontsize=16,
         fontweight='normal'
     )
 
     ax.set_yticklabels(
         ax.get_yticklabels(),
         rotation=0,
-        fontsize=18,
+        fontsize=16,
         fontweight='normal'
     )
 
     # Colorbar Tick Size
     cbar = ax.collections[0].colorbar
-    cbar.ax.tick_params(labelsize=16)
+    cbar.ax.tick_params(labelsize=14)
 
     plt.title("")
     plt.tight_layout()
