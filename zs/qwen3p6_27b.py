@@ -4,8 +4,8 @@ import os
 from openai import OpenAI
 from tqdm import tqdm
 
-INPUT_DIR = "/home/shubhamdas-pg/tlr/data"
-OUTPUT_DIR = "/home/shubhamdas-pg/tlr/zs/qwen3.6-27b"
+INPUT_DIR = "data"
+OUTPUT_DIR = "zs/qwen3.6-27b"
 
 MODEL_NAME = "Qwen/Qwen3.6-27B"
 

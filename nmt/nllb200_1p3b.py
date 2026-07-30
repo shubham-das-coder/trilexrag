@@ -4,8 +4,8 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import os
 
-INPUT_DIR = "/home/shubhamdas-pg/tlr/data"
-OUTPUT_DIR = "/home/shubhamdas-pg/tlr/zs/nllb200-1p3b"
+INPUT_DIR = "data"
+OUTPUT_DIR = "zs/nllb200-1p3b"
 MODEL_NAME = "facebook/nllb-200-1.3B"
 
 assert torch.cuda.is_available()

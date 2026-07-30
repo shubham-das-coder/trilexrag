@@ -3,8 +3,8 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 
-INPUT_FILE = "/home/shubhamdas-pg/tlr/dict/filtered.jsonl"
-OUTPUT_FILE = "/home/shubhamdas-pg/tlr/dict/phi4.jsonl"
+INPUT_FILE = "dict/filtered.jsonl"
+OUTPUT_FILE = "dict/phi4.jsonl"
 
 MODEL_NAME = "microsoft/phi-4"
 

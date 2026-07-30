@@ -1,7 +1,7 @@
 import json
 
-input_file = "/home/shubhamdas-pg/tlr/dict/filtered.jsonl"
-output_file = "/home/shubhamdas-pg/tlr/dict/plus_removed.jsonl"
+input_file = "dict/filtered.jsonl"
+output_file = "dict/plus_removed.jsonl"
 
 kept = 0
 removed = 0

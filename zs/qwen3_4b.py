@@ -4,8 +4,8 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
 
-INPUT_DIR = "/home/shubhamdas-pg/tlr/data"
-OUTPUT_DIR = "/home/shubhamdas-pg/tlr/zs/qwen3-4b"
+INPUT_DIR = "data"
+OUTPUT_DIR = "zs/qwen3-4b"
 MODEL_NAME = "Qwen/Qwen3-4B"
 
 assert torch.cuda.is_available()
