@@ -2,7 +2,7 @@ import json
 from decimal import Decimal, ROUND_HALF_UP
 
 # Input and output files
-INPUT_FILE = "os/gpt-oss-20b/scores.jsonl"
+INPUT_FILE = "nmt/indictrans2-1b/scores.jsonl"
 OUTPUT_FILE = "rnd.txt"
 
 

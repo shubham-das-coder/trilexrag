@@ -2,9 +2,9 @@ import os
 import json
 from tqdm import tqdm
 
-INPUT_ROOT = "os/qwen3-4b-instruct"
+INPUT_ROOT = "nmt/indictrans2-320m"
 
-OUTPUT_BASE = "combined/os/qwen3_4b_instruct"
+OUTPUT_BASE = "combined/nmt/indictrans2_320m"
 
 OUTPUT_OUTPUTS = f"{OUTPUT_BASE}_outputs.jsonl"
 OUTPUT_SCORES = f"{OUTPUT_BASE}_scores.jsonl"

@@ -1,3 +1,7 @@
+{"model": "ai4bharat/indictrans2-indic-indic-dist-320M", "dataset": "flores_plus.jsonl", "max_san_tokens": 92, "max_hin_tokens": 89}
+{"model": "ai4bharat/indictrans2-indic-indic-dist-320M", "dataset": "in22_conv.jsonl", "max_san_tokens": 54, "max_hin_tokens": 52}
+{"model": "ai4bharat/indictrans2-indic-indic-dist-320M", "dataset": "in22_gen.jsonl", "max_san_tokens": 237, "max_hin_tokens": 137}
+{"model": "ai4bharat/indictrans2-indic-indic-dist-320M", "dataset": "nios.jsonl", "max_san_tokens": 439, "max_hin_tokens": 457}
 {"model": "facebook/nllb-200-1.3B", "dataset": "flores_plus.jsonl", "max_san_tokens": 114, "max_hin_tokens": 108}
 {"model": "facebook/nllb-200-1.3B", "dataset": "in22_conv.jsonl", "max_san_tokens": 68, "max_hin_tokens": 54}
 {"model": "facebook/nllb-200-1.3B", "dataset": "in22_gen.jsonl", "max_san_tokens": 285, "max_hin_tokens": 175}

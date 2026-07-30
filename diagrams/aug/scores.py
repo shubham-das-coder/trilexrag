@@ -15,16 +15,14 @@ from pptx.util import Inches
 # 1. Path mapping: Assign each Model/Method (Y-axis row) to its JSONL result file path.
 # Python dictionaries maintain insertion order, so rows will appear in this exact order.
 METHOD_FILE_MAP = {
-    "NLLB-1.3B": "combined/nmt/nllb200_1p3b_scores.jsonl",
-    "NLLB-3.3B": "combined/nmt/nllb200_3p3b_scores.jsonl",
     "Qwen3 ZS": "combined/zs/qwen3_4b_instruct_scores.jsonl",
     "Qwen3 OS": "combined/os/qwen3_4b_instruct_scores.jsonl",
     "Qwen3 FS": "combined/fs/qwen3_4b_instruct_scores.jsonl",
-    "Qwen3 DGT (sa-en)": "combined/se/qwen3_4b_instruct_scores.jsonl",
     "GPT-OSS ZS": "combined/zs/gpt_oss_20b_scores.jsonl",
     "GPT-OSS OS": "combined/os/gpt_oss_20b_scores.jsonl",
     "GPT-OSS FS": "combined/fs/gpt_oss_20b_scores.jsonl",
-    "GPT-OSS DGT (sa-en)": "combined/se/gpt_oss_20b_scores.jsonl"
+    "NLLB-1.3B": "combined/nmt/nllb200_1p3b_scores.jsonl",
+    "NLLB-3.3B": "combined/nmt/nllb200_3p3b_scores.jsonl"
 }
 
 # 2. Dataset Display Name Mapping (maps the internal "file" value to chart X-axis labels)
@@ -135,8 +133,8 @@ for metric_name, cfg in METRICS_TO_PLOT.items():
         continue
 
     # Plot size based on row/column count (reduced height multiplier to make row rectangles shorter)
-    fig_width = max(10, len(df.columns) * 2.5)
-    fig_height = max(4, len(df.index) * 0.5)  # Changed multiplier from 1.0 to 0.5
+    fig_width = max(10, len(df.columns) * 1.50)
+    fig_height = max(4, len(df.index) * 0.75)  # Changed multiplier from 1.0 to 0.5
 
     plt.figure(figsize=(fig_width, fig_height))
 

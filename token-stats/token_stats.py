@@ -11,20 +11,51 @@ MODEL_NAMES = sorted([
     "Qwen/Qwen3-4B-Instruct-2507",
     "facebook/nllb-200-1.3B",
     "facebook/nllb-200-3.3B",
+    "ai4bharat/indictrans2-indic-indic-dist-320M"
 ], key=str.lower)
+
+# FLORES language codes for NLLB and IndicTrans2
+LANG_CODES = {
+    "san": "san_Deva",
+    "hin": "hin_Deva"
+}
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
+print("Loading tokenizers...")
 tokenizers = {
     model: AutoTokenizer.from_pretrained(model, trust_remote_code=True)
     for model in MODEL_NAMES
 }
 
 
-def get_token_length(tokenizer, text):
-    if text is None:
+def get_token_length(tokenizer, model_name, text, lang_key):
+    """
+    Calculates token length while properly handling model-specific 
+    language tag requirements for IndicTrans2 and NLLB.
+    """
+    if not text:
         return 0
-    return len(tokenizer.encode(text, add_special_tokens=False))
+
+    lang_code = LANG_CODES.get(lang_key)
+
+    # 1. Handle IndicTrans2 models
+    if "indictrans2" in model_name.lower():
+        # IndicTrans2 expects format: "<src_lang> <tgt_lang> <text>"
+        formatted_text = f"{lang_code} {lang_code} {text}"
+        tokens = tokenizer.encode(formatted_text, add_special_tokens=False)
+        # Exclude the 2 prefix language tags from the token count calculation
+        return max(0, len(tokens) - 2)
+
+    # 2. Handle NLLB-200 models
+    elif "nllb" in model_name.lower():
+        tokenizer.src_lang = lang_code
+        tokens = tokenizer.encode(text, add_special_tokens=False)
+        return len(tokens)
+
+    # 3. Standard tokenizers (Qwen, GPT, etc.)
+    else:
+        return len(tokenizer.encode(text, add_special_tokens=False))
 
 
 results = []
@@ -51,10 +82,14 @@ for model_name in MODEL_NAMES:
                     desc=f"{os.path.basename(model_name)} | {dataset}",
                     leave=False,
                 ):
-                    data = json.loads(line)
+                    line_str = line.strip()
+                    if not line_str:
+                        continue
+                    
+                    data = json.loads(line_str)
 
-                    san_len = get_token_length(tokenizer, data.get("san", ""))
-                    hin_len = get_token_length(tokenizer, data.get("hin", ""))
+                    san_len = get_token_length(tokenizer, model_name, data.get("san", ""), "san")
+                    hin_len = get_token_length(tokenizer, model_name, data.get("hin", ""), "hin")
 
                     max_san = max(max_san, san_len)
                     max_hin = max(max_hin, hin_len)

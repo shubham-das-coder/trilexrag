@@ -18,7 +18,7 @@ else:
 import evaluate
 from comet import download_model, load_from_checkpoint
 
-INPUT_FOLDER = "os/qwen3-4b-instruct"
+INPUT_FOLDER = "nmt/indictrans2-1b"
 OUTPUT_SCORES_JSONL = os.path.join(INPUT_FOLDER, "scores.jsonl")
 
 os.makedirs(os.path.dirname(OUTPUT_SCORES_JSONL), exist_ok=True)
