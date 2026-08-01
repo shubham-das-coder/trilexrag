@@ -2,6 +2,13 @@
 {"model": "gpt_oss_20b", "file": "in22_conv", "hallucinated_rows": 5, "dataset_total": 1503, "percentage": "0.33"}
 {"model": "gpt_oss_20b", "file": "in22_gen", "hallucinated_rows": 28, "dataset_total": 1024, "percentage": "2.73"}
 {"model": "gpt_oss_20b", "file": "nios", "hallucinated_rows": 1, "dataset_total": 1743, "percentage": "0.06"}
+{"model": "indictrans2_1b", "file": "flores_plus", "hallucinated_rows": 19, "dataset_total": 1012, "percentage": "1.88"}
+{"model": "indictrans2_1b", "file": "in22_conv", "hallucinated_rows": 5, "dataset_total": 1503, "percentage": "0.33"}
+{"model": "indictrans2_1b", "file": "in22_gen", "hallucinated_rows": 50, "dataset_total": 1024, "percentage": "4.88"}
+{"model": "indictrans2_320m", "file": "flores_plus", "hallucinated_rows": 29, "dataset_total": 1012, "percentage": "2.87"}
+{"model": "indictrans2_320m", "file": "in22_conv", "hallucinated_rows": 4, "dataset_total": 1503, "percentage": "0.27"}
+{"model": "indictrans2_320m", "file": "in22_gen", "hallucinated_rows": 136, "dataset_total": 1024, "percentage": "13.28"}
+{"model": "indictrans2_320m", "file": "nios", "hallucinated_rows": 3, "dataset_total": 1743, "percentage": "0.17"}
 {"model": "nllb200_1p3b", "file": "flores_plus", "hallucinated_rows": 43, "dataset_total": 1012, "percentage": "4.25"}
 {"model": "nllb200_1p3b", "file": "in22_conv", "hallucinated_rows": 8, "dataset_total": 1503, "percentage": "0.53"}
 {"model": "nllb200_1p3b", "file": "in22_gen", "hallucinated_rows": 36, "dataset_total": 1024, "percentage": "3.52"}

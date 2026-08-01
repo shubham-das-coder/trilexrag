@@ -1,0 +1,4 @@
+{"file": "flores_plus", "total_rows": 1012, "rows_with_numbers": 210, "same_numbers": 186, "different_numbers": 24, "numeral_accuracy": "88.57"}
+{"file": "in22_conv", "total_rows": 1503, "rows_with_numbers": 79, "same_numbers": 73, "different_numbers": 6, "numeral_accuracy": "92.41"}
+{"file": "in22_gen", "total_rows": 1024, "rows_with_numbers": 301, "same_numbers": 201, "different_numbers": 100, "numeral_accuracy": "66.78"}
+{"file": "nios", "total_rows": 1743, "rows_with_numbers": 150, "same_numbers": 128, "different_numbers": 22, "numeral_accuracy": "85.33"}
